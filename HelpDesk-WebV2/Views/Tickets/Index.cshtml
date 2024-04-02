@@ -1,0 +1,31 @@
+﻿<h2>Opciones</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>N° Ticket</th>
+            <th>Fecha de registro</th>
+            <th>Fecha de termino</th>
+            <th>Usuario de registro</th>
+            <th>Hora de registro</th>
+            <th>Hora de termino</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tickets in Model)
+        {
+            <tr>
+                <td>@tickets.n_ticket</td>
+                <td>@tickets.fech_registro</td>
+                <td>@tickets.fech_termino</td>
+                <td>@tickets.usu_registro</td>
+                <td>@tickets.hora_registro</td>
+                <td>@tickets.hora_termino</td>
+                <td>@tickets.estado</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Menu" asp-action="Index" class="btn btn-secondary">Volver</a>

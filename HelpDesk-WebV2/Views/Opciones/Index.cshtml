@@ -1,0 +1,27 @@
+﻿<h2>Opciones</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tag</th>
+            <th>Descripción</th>
+            <th>Opción</th>
+            <th>Descripción de Opción</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var opcion in Model)
+        {
+            <tr>
+                <td>@opcion.id_opcion</td>
+                <td>@opcion.tag</td>
+                <td>@opcion.descripcion</td>
+                <td>@opcion.opcion</td>
+                <td>@opcion.des_opcion</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Menu" asp-action="Index" class="btn btn-secondary">Volver</a>

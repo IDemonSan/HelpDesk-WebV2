@@ -1,0 +1,53 @@
+﻿@model HelpDesk_WebV2.Models.Empleado
+
+@{
+    ViewData["Title"] = "Registrar Empleado";
+}
+
+<h1>Registrar Empleado</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Registrar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="id_empleado" class="control-label"></label>
+                <input asp-for="id_empleado" class="form-control" />
+                <span asp-validation-for="id_empleado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nombre" class="control-label"></label>
+                <input asp-for="nombre" class="form-control" />
+                <span asp-validation-for="nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ape_paterno" class="control-label"></label>
+                <input asp-for="ape_paterno" class="form-control" />
+                <span asp-validation-for="ape_paterno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ape_materno" class="control-label"></label>
+                <input asp-for="ape_materno" class="form-control" />
+                <span asp-validation-for="ape_materno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="correo" class="control-label"></label>
+                <input asp-for="correo" class="form-control" />
+                <span asp-validation-for="correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="telefono" class="control-label"></label>
+                <input asp-for="telefono" class="form-control" />
+                <span asp-validation-for="telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista</a>
+</div>
